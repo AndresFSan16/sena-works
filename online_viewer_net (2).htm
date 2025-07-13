@@ -1,0 +1,202 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Infografía: Hábitos de Vida Saludables para Transportadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #F5F5F5; }
+        .chart-container { position: relative; width: 100%; max-width: 450px; margin: auto; height: 300px; }
+        .flow-line::after { content: '►'; color: #FAD02C; font-size: 2rem; margin: 0 1rem; }
+        .flow-line-vertical::after { content: '▼'; display: block; color: #FAD02C; font-size: 2rem; margin: 1rem 0; text-align: center; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); padding: 1.5rem; margin-bottom: 2rem; }
+        .icon { font-size: 3rem; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-[#00A1E4] text-white text-center py-12 px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Tu Salud, Tu Carga Más Valiosa</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">Una guía integral para transportadores: alimentación, higiene, descanso y bienestar para rendir al máximo en la ruta y en casa.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Fundamentos -->
+        <section id="fundamentos" class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#00A1E4]">Fundamentos para un Estilo de Vida Saludable</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Nutrición -->
+                <div class="card flex flex-col">
+                    <div class="text-center mb-4">
+                        <span class="icon">🥗</span>
+                        <h3 class="text-2xl font-bold mt-2 text-[#F26C4F]">Nutrición Inteligente</h3>
+                    </div>
+                    <p class="text-center mb-4 flex-grow">Una dieta variada te mantiene alerta y fuerte. Planifica tus comidas con frutas, verduras, proteínas magras y carbohidratos complejos.</p>
+                    <div class="chart-container"><canvas id="nutritionChart"></canvas></div>
+                    <p class="text-sm text-center mt-2 text-gray-600">Distribución ideal del plato para mantener energía y concentración.</p>
+                </div>
+
+                <!-- Pausas activas -->
+                <div class="card flex flex-col">
+                    <div class="text-center mb-4">
+                        <span class="icon">🏃‍♂️</span>
+                        <h3 class="text-2xl font-bold mt-2 text-[#F26C4F]">Actividad y Pausas</h3>
+                    </div>
+                    <p class="text-center mb-4 flex-grow">El sedentarismo al volante puede afectar tu salud. Haz pausas cada 2-3 horas para caminar y estirar, mejorando circulación y reduciendo dolores.</p>
+                    <div class="mt-4 text-center">
+                        <div class="flex items-center justify-center text-lg font-semibold">
+                            <div class="bg-blue-100 p-3 rounded-lg">PARA</div>
+                            <span class="flow-line"></span>
+                            <div class="bg-blue-100 p-3 rounded-lg">CAMINA</div>
+                            <span class="flow-line"></span>
+                            <div class="bg-blue-100 p-3 rounded-lg">ESTIRA</div>
+                        </div>
+                        <p class="text-sm text-center mt-4 text-gray-600">Ritmo sencillo que previene fatiga y aumenta tu enfoque en la carretera.</p>
+                    </div>
+                </div>
+
+                <!-- Descanso -->
+                <div class="card flex flex-col">
+                    <div class="text-center mb-4">
+                        <span class="icon">😴</span>
+                        <h3 class="text-2xl font-bold mt-2 text-[#F26C4F]">Descanso Reparador</h3>
+                    </div>
+                    <p class="text-center mb-4 flex-grow">Dormir entre 7 y 8 horas fortalece tu sistema inmune y reduce el riesgo de accidentes. Descansar bien es tu mejor herramienta de seguridad.</p>
+                    <div class="chart-container"><canvas id="sleepChart"></canvas></div>
+                    <p class="text-sm text-center mt-2 text-gray-600">Comparativa de riesgos según las horas de sueño.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Higiene -->
+        <section id="higiene" class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#00A1E4]">Plan de Higiene Corporal y Profesional</h2>
+            <div class="card">
+                <p class="text-center text-lg mb-6">La higiene personal refleja respeto y compromiso. Además, fortalece tu salud y tu imagen frente a clientes y compañeros.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-[#00A1E4] text-white">
+                            <tr>
+                                <th class="p-3 font-bold uppercase">Hábito</th>
+                                <th class="p-3 font-bold uppercase">Frecuencia</th>
+                                <th class="p-3 font-bold uppercase">Beneficio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3">Ducha completa</td>
+                                <td class="p-3">Diario</td>
+                                <td class="p-3">Previene infecciones y te mantiene fresco.</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3">Lavado de manos</td>
+                                <td class="p-3">Constante</td>
+                                <td class="p-3">Reduce enfermedades y evita contaminación de alimentos.</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3">Cepillado dental</td>
+                                <td class="p-3">2 veces/día</td>
+                                <td class="p-3">Evita caries y proyecta buena presentación.</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-3">Cambio de ropa</td>
+                                <td class="p-3">Diario</td>
+                                <td class="p-3">Favorece imagen limpia y profesional.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3">Limpieza de cabina</td>
+                                <td class="p-3">Diario</td>
+                                <td class="p-3">Espacio ordenado que reduce estrés y mejora concentración.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integración -->
+        <section id="integracion" class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-[#00A1E4]">Interpretando tu Estilo de Vida Saludable</h2>
+            <p class="max-w-4xl mx-auto text-lg mb-10">Nutrición, higiene, actividad y descanso se refuerzan mutuamente, generando beneficios en el trabajo y en tu vida social. Descubre cómo todo se conecta.</p>
+            <div class="flex flex-col items-center">
+                <div class="flex flex-wrap justify-center gap-4 mb-4">
+                    <div class="card text-white bg-[#F26C4F] p-4 font-bold">Nutrición</div>
+                    <div class="card text-white bg-[#F26C4F] p-4 font-bold">Actividad Física</div>
+                    <div class="card text-white bg-[#F26C4F] p-4 font-bold">Descanso</div>
+                    <div class="card text-white bg-[#F26C4F] p-4 font-bold">Higiene</div>
+                </div>
+                <div class="flow-line-vertical"></div>
+                <div class="w-full flex flex-col md:flex-row justify-center items-stretch gap-8">
+                    <div class="card flex-1">
+                        <h4 class="text-xl font-bold mb-2 text-[#0077C0]">Contexto Productivo</h4>
+                        <ul class="text-left list-disc space-y-2">
+                            <li>Más enfoque y reflejos al conducir.</li>
+                            <li>Menos accidentes y menos ausencias.</li>
+                            <li>Mejora la imagen ante clientes y empresa.</li>
+                            <li>Mayor rendimiento y satisfacción laboral.</li>
+                        </ul>
+                    </div>
+                    <div class="card flex-1">
+                        <h4 class="text-xl font-bold mb-2 text-[#0077C0]">Contexto Social</h4>
+                        <ul class="text-left list-disc space-y-2">
+                            <li>Energía para disfrutar en familia.</li>
+                            <li>Relaciones personales más sanas.</li>
+                            <li>Menos estrés y mejor estado de ánimo.</li>
+                            <li>Vida más larga y de mejor calidad.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#333333] text-white text-center p-8">
+        <p class="text-xl font-bold">Cuidarte es tu mejor inversión. ¡Conduce con salud y orgullo!</p>
+        <p class="mt-2">Presentado para el SENA - Gestión Integral de Transporte.</p>
+    </footer>
+
+    <script>
+        const nutritionData = {
+            labels: ['Frutas y Verduras', 'Proteínas Magras', 'Carbohidratos'],
+            datasets: [{
+                data: [50, 25, 25],
+                backgroundColor: ['#00A1E4', '#FAD02C', '#F26C4F'],
+                borderColor: '#FFFFFF',
+                borderWidth: 3
+            }]
+        };
+        new Chart(document.getElementById('nutritionChart'), {
+            type: 'doughnut',
+            data: nutritionData,
+            options: { plugins: { legend: { position: 'top' } }, cutout: '60%' }
+        });
+
+        const sleepData = {
+            labels: ['Recomendado', 'Riesgo Moderado', 'Riesgo Alto'],
+            datasets: [{
+                data: [7.5, 6, 4.5],
+                backgroundColor: ['rgba(0,161,228,0.7)', 'rgba(250,208,44,0.7)', 'rgba(242,108,79,0.7)'],
+                borderColor: ['#00A1E4', '#FAD02C', '#F26C4F'],
+                borderWidth: 2
+            }]
+        };
+        new Chart(document.getElementById('sleepChart'), {
+            type: 'bar',
+            data: sleepData,
+            options: {
+                indexAxis: 'y',
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { beginAtZero: true, title: { display: true, text: 'Horas de sueño' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
